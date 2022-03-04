@@ -9,17 +9,3 @@ class KeyValueArgumentParser(argparse.Action):
         for value in values:
             key, value = value.split('=')
             getattr(namespace, self.dest)[key] = value
-  
-# # creating parser object
-# parser = argparse.ArgumentParser()
-  
-# # adding an arguments 
-# parser.add_argument('--kwargs', 
-#                     nargs='*', 
-#                     action = keyvalue)
-  
-#  #parsing arguments 
-# args = parser.parse_args()
-  
-# # show the dictionary
-# print(args.kwargs)
